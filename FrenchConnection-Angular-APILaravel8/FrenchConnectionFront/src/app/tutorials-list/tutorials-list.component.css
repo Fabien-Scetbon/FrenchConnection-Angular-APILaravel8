@@ -1,0 +1,52 @@
+.list {
+    text-align: left;
+    max-width: 750px;
+    margin: auto;
+}
+
+.imageFrench {
+    width: 100px;
+    height: 200px;
+
+}
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+select {
+    display:block;
+}
+
+
+
+.card {
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+}
+.article-card{
+    
+display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 2em;
+}
+
+
+.titre{
+
+margin-bottom: 15%;
+
+     font-family: 'Road Rage', cursive;
+font-family: 'Yellowtail', cursive;
+}
+
+
+
+
+
+

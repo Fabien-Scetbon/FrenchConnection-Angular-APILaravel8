@@ -1,0 +1,16 @@
+<div
+  [routerLink]="['/product_page/', product?.id]"
+  [queryParams]="{ product: product?.id }"
+>
+  {{ productName?.substring(0, 20) }} <br />
+
+  <img
+    class="image"
+    src="https://source.unsplash.com/random/500x500"
+    alt="product"
+  /><br />
+  {{ product?.price }} €<br />
+   <!-- {{ product?.category }} <br /> -->
+
+  <!-- <img src="http://localhost:8000/image/{{product?.image}}" alt="product"> -->
+</div>

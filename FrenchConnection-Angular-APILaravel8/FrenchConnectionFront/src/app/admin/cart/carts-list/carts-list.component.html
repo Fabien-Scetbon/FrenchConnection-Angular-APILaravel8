@@ -1,0 +1,56 @@
+<div class="list row">
+  <div class="col-md-8">
+      <!-- <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by name"
+          [(ngModel)]="userName"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchUserName()"
+          >
+            Rechercher par utilisateur
+          </button>
+        </div>
+      </div>-->
+    </div> 
+
+  <div class="col-md-6">
+    <h4 *ngIf="userRole != 'Admin'">
+      Mon panier d'un montant total de {{ total }} €
+    </h4>
+    <h4 *ngIf="userRole == 'Admin'">Liste des paniers des utilisateurs.</h4>
+
+    <a *ngIf="total != 0" href="#" class="nav-link">Finaliser la commande</a>
+
+    <!-- <a
+      class="badge badge-success"
+      routerLink="/admin/addcart"
+    >
+      Add a cart
+    </a> -->
+    <h3 *ngIf="nbProducts == 0">Vous n'avez effectué aucun achat.</h3>
+
+    <ol class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let cart of carts; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveCart(cart, i)"
+      >
+        <!-- {{ cart.id }} -->
+        {{ cart.productName }}
+      </li>
+    </ol>
+  </div>
+  <div class="col-md-6">
+    <app-cart-details
+      [viewMode]="true"
+      [currentCart]="currentCart"
+    ></app-cart-details>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+/* .jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+
+.fill {
+    height: 300px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/assets/images/bandeau.png');
+}
+
+.alignement{
+    
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 2em;
+  
+} 
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+.description {
+
+
+    font: system-ui;
+    font-size: 150%;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.citation {
+    margin-top : 5%;
+    margin-bottom: 5%;
+    font-size: 300%;
+    font-style: italic;
+
+
+
+
+}
+
+.container{
+
+
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.titre{
+
+
+    margin-bottom: 15%;
+    font-family: 'Road Rage', cursive;
+font-family: 'Yellowtail', cursive;
+
+}
+
+
+

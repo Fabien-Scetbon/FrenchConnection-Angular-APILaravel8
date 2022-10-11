@@ -1,0 +1,26 @@
+<!-- <div class="row">
+  <div class="col s12"
+
+        [routerLink]="['/product_result']" 
+        [queryParams]="{category: category.id}">   
+          <img class = "image" src="https://source.unsplash.com/random/200x200" alt="category"> -->
+
+<!-- <img class = "image" src="http://localhost:8000/image/{{category.image}}" alt="category"> -->
+<!-- <h5 class= "text">{{category.name}}</h5>
+</div> -->
+
+
+<div class="row">
+  <div class="col s12">
+    
+      
+      <div class="card">
+      <div class="card-image" [routerLink]="['/product_result']" [queryParams]="{category: category.id}">
+        <img class="image" src="https://source.unsplash.com/random/200x200" alt="category">
+        <span class="card-title">{{category.name}}</span>
+        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+      </div>
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,86 @@
+<!-- <div class="container">
+  <div>
+    <img
+      class="image"
+      src="/assets/images/{{ product.image }}"
+      alt="product"
+    />
+  </div>
+  <div class="index">
+    <h1>{{ product.name | uppercase }}</h1>
+    <h3>{{ product.category }}</h3>
+    <p>{{ product.description }}</p>
+    <p>{{ product.price }} €</p>
+    <p>{{ product.seller }}</p>
+
+    <div *ngIf="!isInCart; else elseBlock2">
+      <div *ngIf="!productSold; else elseBlock">
+        <button className="addCart" (click)="addToCart()">
+          Ajouter au panier
+        </button>
+      </div>
+
+      <ng-template #elseBlock>
+        <p>Désolé, cet article a déjà été vendu.</p>
+        <p>Contactez le créateur pour plus d'infos.</p>
+      </ng-template>
+    </div>
+    <ng-template #elseBlock2>
+      <p>Cet article a bien été ajouté à votre panier.</p>
+    </ng-template>
+  </div>
+</div> -->
+
+<div class="container">
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"
+  ></script>
+
+  <div class="container photosDG pt-5">
+    <div class="row">
+      <div class="col l5 m6 s12">
+        <img
+          class="materialboxed responsive-img troisImg"
+          src="/assets/images/{{ product.image }}"
+        />
+        <br />
+
+       
+      </div>
+      <div class="col l5 offset-l1 m12 s12">
+        <h1>{{ product.name | uppercase }}</h1>
+
+        <h3>{{ product.category }}</h3>
+        <p>{{ product.description }}</p>
+        <p>{{ product.price }} €</p>
+        <p>{{ product.seller }}</p>
+
+        <div class="index">
+          <div *ngIf="!isInCart; else elseBlock2">
+            <div *ngIf="!productSold; else elseBlock">
+              <button className="addCart" (click)="addToCart()">
+                Ajouter au panier
+              </button>
+            </div>
+
+            <ng-template #elseBlock
+              ><blockquote class="light">
+                <p>
+                  Désolé, cet article a déjà été vendu.<br />
+                  Contactez le créateur pour plus d'infos.
+                </p>
+              </blockquote></ng-template
+            >
+          </div>
+          <ng-template #elseBlock2>
+            <p>Cet article a bien été ajouté à votre panier.</p>
+          </ng-template>
+        </div>
+
+        <p><br /><br /></p>
+      </div>
+    </div>
+  </div>
+</div>

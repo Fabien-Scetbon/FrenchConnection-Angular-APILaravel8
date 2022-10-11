@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="text-center">
+    <h1 class="text-center text-white pt-5">Users</h1>
+    <p class="text-white h6">Built By Les 4F</p>
+
+    <h4 class="text-center pt-4 pb-4">
+      <small>
+        <button class="btn btn-primary mt-2" routerLink="/admin/add_user">
+          Créer utilisateur
+        </button>
+      </small>
+    </h4>
+
+    <div class="">
+      <table class="table table-striped table-dark table-responsive-lg">
+        <thead>
+          <tr>
+            
+            <th scope="col">Role</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
+          </tr>
+        </thead>
+
+        <thead class="thead">
+          <tr *ngFor="let user of users; let i = index">
+            
+            <td>{{ user.role }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.phone }}</td>
+            <div class="btn-group" style="margin-bottom: 20px">
+              <button class="btn-primary" (click)="removeUser(user.id)">
+                supr
+              </button>
+            </div>
+            <div class="btn-group" style="margin-bottom: 20px">
+              <button class="btn-secondary" (click)="updateUserPage(user.id)">
+                edit
+              </button>
+            </div>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>

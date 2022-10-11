@@ -1,0 +1,16 @@
+.submit-form {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .select{
+    position: relative;
+    font-family: inherit;
+    background-color: transparent;
+    width: 350px;
+    padding: 10px 10px 10px 0;
+    font-size: 18px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0, 0.12);
+  }

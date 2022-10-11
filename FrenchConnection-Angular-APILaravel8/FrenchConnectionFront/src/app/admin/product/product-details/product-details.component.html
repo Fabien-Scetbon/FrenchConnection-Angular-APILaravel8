@@ -1,0 +1,132 @@
+<div *ngIf="viewMode; else editable">
+    <div *ngIf="currentProduct.id">
+      <h4>Product</h4>
+      <div>
+        <label><strong>Id:</strong></label> {{ currentProduct.id }}
+      </div>
+      <div>
+        <label><strong>Name:</strong></label> {{ currentProduct.name }}
+      </div>
+      <div>
+        <label><strong>Description:</strong></label>
+        {{ currentProduct.description }}
+      </div>
+      <div>
+        <label><strong>Price:</strong></label>
+        {{ currentProduct.price }}
+      </div>
+      <div>
+        <img src="http://localhost:8000/image/{{currentProduct.image}}" alt="">
+      </div>
+      <div>
+        <label><strong>Vendor:</strong></label>
+        {{ currentProduct.seller_id }}
+      </div>
+      <div>
+        <label><strong>category:</strong></label>
+        {{ currentProduct.category }}
+      </div>
+      <div>
+        <label><strong>Status:</strong></label>
+        {{ currentProduct.status ? "A vendre" : "Vendu" }}
+      </div>
+
+      <a
+        class="badge badge-warning"
+        routerLink="{{ currentProduct.id }}"
+      >
+        Edit
+      </a>
+    </div>
+  
+    <div *ngIf="!currentProduct">
+      <br />
+      <p>Please click on a Product...</p>
+    </div>
+  </div>
+  
+  <ng-template #editable>
+    <div *ngIf="currentProduct.id" class="edit-form">
+      <h4>Product</h4>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            [(ngModel)]="currentProduct.name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            [(ngModel)]="currentProduct.description"
+            name="description"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            [(ngModel)]="currentProduct.price"
+            name="price"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="image">Modifier Image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="image"
+            [(ngModel)]="currentProduct.image"
+            name="image"
+          />
+        </div>
+
+
+        <div class="form-group">
+          <label for="category_id">category_name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="category_id"
+            [(ngModel)]="currentProduct.category_id"
+            name="category_id"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label><strong>Status:</strong></label>
+          {{ currentProduct.status ? "A vendre" : "Vendu" }}
+        </div>
+      </form>
+    
+      <button class="btn btn-primary mr-2 " (click)="deleteProduct()">
+        supprimer
+      </button>
+  
+      <button
+        type="submit"
+        class="btn btn-primary mr-2"
+        (click)="updateProduct()"
+      >
+        Modifier
+      </button>
+
+      <p>{{ message }}</p>
+    </div>
+  
+    <div *ngIf="!currentProduct.id">
+      <br />
+      <p>Cannot access this Product...</p>
+    </div>
+  </ng-template>

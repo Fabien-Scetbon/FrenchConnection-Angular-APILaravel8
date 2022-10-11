@@ -1,0 +1,54 @@
+
+
+
+
+
+<!-- <div class="container"> -->
+  <div class="fill"></div>
+  
+    <app-tutorials-list></app-tutorials-list>
+
+    <div class="container">
+      <div class="titre center-align">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Road+Rage&family=Yellowtail&display=swap" rel="stylesheet">
+    <h3>Les categories :</h3>
+      </div>
+
+    <div class="alignement">
+    <div *ngFor="let category of categories; let i = index  " >
+      <app-category-button [category]="category"></app-category-button>
+    </div>
+</div>
+</div>
+
+
+<div class="container text align-center">
+<h2>Qu'est-ce que French Connection ?</h2>
+
+<blockquote class="citation">
+  "permettre aux créateurs de s'exprimer librement"
+</blockquote>
+
+
+<p class="description">
+  French Connection est une platforme de vente en ligne de mobilier haut de gamme. 
+  Crée par un collectif de dévellopeur basé à Montpellier et Nancy. Cette équipe talentueuse a su mettre en avant
+sa passion pour le mobiler et devellopement Web pour permettre aux créateurs indépendants de 
+s'exprimer librement et aux utilisateurs de trouver la boutique qui leur ressemble. </p>
+</div>
+<!-- </div> -->
+
+  
+<!-- <div class="container">
+  
+  <img src="/assets/images/bandeau.png" alt="bandeau" />
+  <header class="jumbotron">
+    <app-tutorials-list></app-tutorials-list>
+    <h2>Les categories</h2>
+    <div class="categories" *ngFor="let category of categories; let i = index">
+      <app-category-button [category]="category">></app-category-button>
+    </div>
+  </header>
+</div> -->

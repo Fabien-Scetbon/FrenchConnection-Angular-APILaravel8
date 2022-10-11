@@ -1,0 +1,65 @@
+/* .container{
+    margin-top: 5%;
+    display: flex;
+}
+.container img {
+    width: 85%;
+}
+.index{
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+} */
+
+
+.container {
+    width: 100% !important;
+}
+
+.photosDG {
+    margin-top: 19px;
+}
+
+/* Médias queries */
+@media screen and (max-width: 1000px){
+    header{
+    background-position: 0px 80px;
+        }
+    }
+
+
+@media screen and (max-width: 992px){
+    
+    .photosDG {
+        margin-top: 0;
+    }
+
+    .troisImg{
+        margin: 60px 0;
+    }
+  
+}
+
+@media screen and (max-width: 700px){
+    header  {
+
+    background-position: -100px 80px;
+
+        }
+
+    }
+    
+        
+@media screen and (max-width: 600px){
+    h1{
+        color: #f1f1f1;
+        margin-top: 100px;
+    }
+    
+    header  {
+    height: 70vh;
+    background-position: -100px 100px;
+
+        }
+
+    }

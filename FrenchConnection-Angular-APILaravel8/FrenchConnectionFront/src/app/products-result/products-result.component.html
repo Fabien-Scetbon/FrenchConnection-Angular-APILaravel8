@@ -1,0 +1,26 @@
+
+
+
+    <div class= "products" *ngFor="let product of products; let i = index">
+
+
+         <div class="card-image waves-effect waves-block waves-light">
+          <div
+            [routerLink]="['/product_page/', product.id]"
+            [queryParams]="{ product: product.id }"
+          >
+            {{ product.name }} <br />
+            <img
+              class="imageFrench"
+              src="/assets/images/{{ product.image }}"
+            /><br />
+
+            {{ product.price }} €<br />
+            {{ product.category }} <br />
+            {{ product.image }} <br />
+            <i class="material-icons right">more_vert</i>
+
+           
+          </div>
+        </div>
+    </div>
